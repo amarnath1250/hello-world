@@ -7,7 +7,7 @@ class User {
 	loadUsers(){
 		if (!this.userFetchPromise) {
 	      	this.userFetchPromise = new Promise(async resolve => {
-		        const userFetchPromise = await fetch('http://www.mocky.io/v2/5ba8efb23100007200c2750c');
+		        const userFetchPromise = await fetch('./user.json');
 		        this.usersArray = (await userFetchPromise.json());
 		        resolve();
 	      	});
